@@ -1,0 +1,76 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 25/11/2021
+  Changes:
+    - Updated to version 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 11/08/2019
+  Changes:
+    - Updated mod number to make work with 0.18 because devs refuse to allow mods with incorrect version to be loaded anyway.
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 11/08/2019
+  Fixes:
+    - Crash on load from line 270.
+  Removed:
+    - If statement checking for AAI mod, to fix crash on line 270.
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 11/08/2019
+  Fixes:
+    - Crash on load from line 227 resulting in nil.
+  Removed:
+    - if statement checking for bob's mods before letting you use modular port option. Can't make this work right now, resulted in crash.
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 11/07/2019
+  Changes:
+    - Removed axe from start.
+    - Renamed science packs because the devs changed the code name for no particular reason other than to break all mods that used them.
+    - Added modular robo port option.
+  New Features:
+    - Input Box for additional items not in the dropdowns.
+    - Placeholder input box for Technologies to start with.
+    - Placeholder input box for items to disable.
+    - Placeholder input box for technologies to disable.
+  Removed:
+    - Money related events, since its not used right now.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 01/30/2018
+  Bugfixes:
+    - Fixed incorrect display order.
+  Changes:
+    - Renamed Shamefully Easy Electric to Mega Electric.
+    - Added "Epic Electric" option that adds even more electric things and even gives you electric furnaces. This option also gives substations and uses substation multiplier.
+    - Added blue science packs to lab start conditions.
+    - Renamed Power Armor option to remove "modules" from the name so I can use it elsewhere.
+    - Added a new modules setting to allow you to start with one of three types of modules or even all of them.
+    - Renamed train option.
+    - Altered the money option to no longer give you a static amount, the new amount given is based on what options you chose, which can drive you into the negative. In which case you'll simply get nothing.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 01/26/2018
+  Changes:
+    - Added a beta train option, let me know if you believe I should increase or decrease what the option gives you in train parts.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 01/21/2018
+  Bugfixes:
+    - Added missing stone furnace to electric drill option.
+  Changes:
+    - Changed two options from Boolean to Dropdown to give additional choices.
+    - Improved and optimized the script a little to allow better inventory management of your choices.
+    - New options added for weapon starting.
+    - Changed some options from Boolean to Dropdown, allowing different levels of choices.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 01/19/2018
+  Bugfixes:
+    - Fixed an issue with the mod truncicating items in the hotbar, now all items properly go to the correct locations except a few things which are for the moment placed inside the inventory instead of the hotbar.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 01/19/2018
+  Changes:
+    - Created Mod

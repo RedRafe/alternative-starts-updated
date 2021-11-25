@@ -1,0 +1,83 @@
+--[[
+	Code work done by ~Vas, follow the license with the mod if you decide you want to use my work.
+]]--
+
+-- User Settings
+local START_EQUIP=			settings.global["basic-kit-start-string"].value
+local START_TECH=			settings.global["basic-kit-start-research-string"].value
+local DISASABLE_EQUIP=		settings.global["basic-kit-disable-equipment-string"].value
+local DISABLE_TECH=			settings.global["basic-kit-disable-research-string"].value
+--local ADD_MONEY=			settings.global["basic-kit-money"].value
+
+--Start the kit table.
+local kit={}
+--local MY_MONEY = 0
+
+-- Lets create a splitter function so we can split our strings properly.
+local function split(inputstr, sep)
+	if sep == nil then sep = "%s" end
+	t={} i=1
+	for str in string.gmatch(inputstr, "([^"..sep.."]+)") do 
+		t[i] = str
+		i = i + 1
+	end return t
+end
+
+-- Old if else statements were here
+
+--[[if ADD_MONEY then
+	if MY_MONEY >= 1 then
+		table.insert(kit,{name="coin",count=MY_MONEY})
+	end
+end]]--
+
+-- MODS
+if settings.startup["start-with-vehicle-miner"].value == true then
+	table.insert(kit,{name="vehicle-miner",count=1})
+end
+
+if settings.startup["start-with-unit-remote-control"].value == true then
+	table.insert(kit,{name="unit-remote-control",count=1})
+end
+
+-- Now lets get the player that just joined, and clear all of his inventory to replace with ours.
+script.on_event(defines.events.on_player_created,function(param)
+	local p=game.players[param.player_index]
+	--[[if ADD_MONEY then
+		if MY_MONEY <= 0 then
+			p.print("Sorry, your account balance is " .. MY_MONEY .. "FC, so we repossessed your house.")
+			p.print("Your spouse left you too and in your absence took everything you had left, and is now dating your best friend.")
+		end
+	end]]--
+
+	if START_EQUIP ~= "" then
+		local items = split(START_EQUIP,",")
+		for no, item_str in pairs(items) do
+			local info = split(item_str,":")
+			if game.item_prototypes[info[1]] then
+				table.insert(kit, {name=info[1],count=tonumber(info[2])})
+			end
+		end
+	end
+
+	--[[if START_TECH == "everything" then
+		--p.force.research_all_technologies()
+	elseif ~= "" then
+		local techs = split(START_TECH,",")
+		for no, tech_str in pairs(techs) do
+			--p.force.technology[techs].enabled=true
+		end
+	end]]--
+
+	-- Here we run a check to clear all sections of his inventory.
+	for i,v in pairs(defines.inventory) do
+		pcall(function()
+			p.get_inventory(v).clear()
+		end)
+	end
+
+	-- Now we will add all the items from our mod settings choices.
+	for i,v in pairs(kit) do
+		p.insert(v)
+	end
+end)
