@@ -13,10 +13,12 @@ for key, options in pairs(AS.config) do
         table.insert(AS.item_list, tuple)
       end
     else
-      game.print("Options not defined for key: " .. option_name)
+      if settings.global[key].value ~= "None" then
+        log("Options not defined for key: " .. option_name)
+      end
     end
   else
-    game.print("Undefined global setting with key: " .. key)
+    log("Undefined global setting with key: " .. key)
   end
 end
 

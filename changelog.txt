@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 17/12/2021
+  Fixes:
+    - Fixed crash on loading new games with no settings selected
+    - Implemented additional check for default settings
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 25/11/2021
   Changes:

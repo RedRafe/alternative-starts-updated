@@ -42,6 +42,7 @@ data:extend({
 		default_value = "None",
 		allowed_values = {
 			"None",
+			"Steam",
 			"Advanced",
 			"Solar",
 			"Solar Field",

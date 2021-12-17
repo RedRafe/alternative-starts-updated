@@ -61,6 +61,7 @@ AS.config = {
     }
   },
   ["basic-kit-power"] = {
+    ["None"] = {},
     ["Steam"] = {
       {   1, "offshore-pump"},
       {  10, "pipe"},
