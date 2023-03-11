@@ -35,6 +35,7 @@ AS.config = {
       {  10, "steel-furnace" }
     },
     ["Tycoon"] = {
+      {  19, "burner-mining-drill" },
       {  20, "electric-mining-drill" },
       {   4 * AS.multiplier, "substation" },
       {  20, "electric-furnace" }
