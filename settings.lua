@@ -30,7 +30,8 @@ data:extend({
 			"None",
 			"Civilian",
 			"Soldier",
-			"Rambo"
+			"Rambo",
+			"Jedi"
 		},
 		order = "as-200"
 	},

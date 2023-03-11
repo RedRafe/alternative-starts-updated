@@ -59,6 +59,15 @@ AS.config = {
       { 100, "uranium-rounds-magazine" },
       {  50, "flamethrower-ammo"},
       {  50, "piercing-shotgun-shell"}
+    },
+    ["Jedi"] = {
+      {   1, "power-armor-mk2"},
+      {   3, "fusion-reactor-equipment"},
+      {   8, "energy-shield-mk2-equipment"},
+      {  12, "personal-laser-defense-equipment" },
+      {   5, "battery-mk2-equipment"},
+      {   1, "spidertron"},
+      {   3, "exoskeleton-equipment"}
     }
   },
   ["basic-kit-power"] = {
